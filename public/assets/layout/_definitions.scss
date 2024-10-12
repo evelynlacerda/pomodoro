@@ -1,8 +1,29 @@
+.time,
+.break,
+.repeat {
+    width: 100%;
+}
+
+.time-set,
+.break-set,
+.custom-set,
+.repeat-set {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > div {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+}
+
 .controls {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
     background-color: $bg-definitions;
     padding: 1.5rem;
     border-radius: 1rem;
@@ -14,5 +35,36 @@
         color: $font-color;
         text-transform: uppercase;
         letter-spacing: 0.15rem;
+    }
+
+    p {
+        font-family: $font-roboto;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        color: $font-color;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+
+    label {
+        font-family: $font-segeo;
+        color: $font-color;
+        font-size: 13px;
+        font-weight: 300;
+        letter-spacing: 0.05rem;
+    }
+
+    .custom-set {
+        gap: 0.5rem;
+
+        input {
+            max-width: 8.75rem;
+            background-color: $bg-input;
+            padding: 8px 10px;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+        }
     }
 }
