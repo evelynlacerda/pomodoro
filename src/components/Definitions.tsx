@@ -6,7 +6,7 @@ const Definitions = () => {
 	return (
 		<>
 			<div className="controls">
-				<h2>{t("Definitions")}</h2>
+				<h2>{t("Settings")}</h2>
 
 				<div className="time">
 					<p>{t("Minutes")}</p>
