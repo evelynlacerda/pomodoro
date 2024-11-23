@@ -1,3 +1,10 @@
 {
-    "Click me": "Clique aqui"
+    "Start": "Iniciar",
+    "Pause": "Pausar",
+    "Reset": "Reiniciar",
+    "Settings": "Configurações",
+    "Minutes": "Minutos",
+    "Break": "Intervalo",
+    "Custom": "Personalizar",
+    "Repeat": "Repetir"
 }
