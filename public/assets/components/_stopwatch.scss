@@ -1,0 +1,41 @@
+.stopwatch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 522px;
+    height: 522px;
+    border-radius: 50%;
+
+    .shadow {
+        position: absolute;
+        left: 50%;
+        translate: (-50%);
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        box-shadow: $shadow-2;
+        z-index: 2;
+    }
+    
+    .CircularProgressbar {        
+        .CircularProgressbar-trail {
+            stroke: #4C566A;
+            stroke-width: 4px;
+        }
+        
+        .CircularProgressbar-path {
+            width: 100%;
+            height: 100%;
+            stroke: #88C0D0;
+            stroke-width: 4px;
+        }
+
+        .CircularProgressbar-text {
+            font-family: $font-rubik;
+            font-size: 10px;
+            font-weight: 500;
+            fill: #D8DEE9;
+        }
+    }
+}

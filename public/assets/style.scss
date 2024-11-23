@@ -2,6 +2,8 @@
 
 @import "./themes/fonts";
 @import "./reset.scss";
-
 @import "./layout/body";
-@import "./layout/definitions";
+
+@import "./components/buttons";
+@import "./components/definitions";
+@import "./components/stopwatch";
