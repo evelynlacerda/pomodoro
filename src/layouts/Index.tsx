@@ -1,10 +1,16 @@
-import useLang from "@/hooks/_useLang";
+import useLang from "@/hooks/useLang";
 import Buttons from "../components/Buttons";
 import Definitions from "../components/Definitions";
 import Stopwatch from "../components/Stopwatch";
+import { useState } from "react";
 
 const Index = () => {
 	const { currentLanguage, handleChangeLanguage } = useLang();
+	const [totalTime, setTotalTime] = useState(1500); 
+
+    const handleTimeChange = (time: number) => {
+        setTotalTime(time);
+    }
 
 	return (
 		<main>
@@ -16,10 +22,10 @@ const Index = () => {
 			</button>
 			<div className="content">
 				<div>
-					<Definitions />
-					<Buttons />
+					<Definitions onTimeChange={handleTimeChange}/>
+					<Buttons totalTime={totalTime} />
 				</div>
-				<Stopwatch />
+				<Stopwatch totalTime={totalTime} />
 			</div>
 		</main>
 	);

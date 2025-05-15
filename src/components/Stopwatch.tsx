@@ -1,18 +1,21 @@
+import useConfigStopwatch from "@/hooks/useConfigs";
 import { CircularProgressbar } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
 
-const Stopwatch = () => {
-    const percentage = 50;
+const Stopwatch = ({ totalTime }: { totalTime: number }) => {
+    const {timeLeft, formatTime} = useConfigStopwatch(totalTime);
+    const percentage = (timeLeft / totalTime) * 100;
+    // const percentage = 75;
     
     return (
 			<div className="stopwatch">
                 <div className="shadow"></div>
 				<CircularProgressbar
 					value={percentage}
-					text="00:22:30"
+					text={formatTime(timeLeft)}
 				/>
 			</div>
 		);
 }
 
-export default Stopwatch
+export default Stopwatch;
