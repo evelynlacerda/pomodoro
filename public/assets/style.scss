@@ -1,9 +1,8 @@
-@import "./themes/variables";
+@use "./themes/variables";
+@use "./themes/fonts";
+@use "./reset";
+@use "./layout/body";
 
-@import "./themes/fonts";
-@import "./reset.scss";
-@import "./layout/body";
-
-@import "./components/buttons";
-@import "./components/definitions";
-@import "./components/stopwatch";
+@use "./components/buttons";
+@use "./components/definitions";
+@use "./components/stopwatch";
