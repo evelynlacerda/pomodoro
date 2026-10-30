@@ -9,5 +9,6 @@
     "seconds": "segundos",
     "Break": "Intervalo",
     "Custom": "Personalizar",
-    "Repeat": "Repetir"
+    "Repeat": "Repetir",
+    "Enter the time in seconds. Ex: 1 minute = 60": "Insira o tempo em segundos. Ex: 1 minuto = 60"
 }
