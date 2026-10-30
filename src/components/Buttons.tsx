@@ -1,9 +1,13 @@
-import useConfigStopwatch from "@/hooks/useConfigs";
 import { useTranslation } from "react-i18next";
 
-const Buttons = ({totalTime}: {totalTime: number}) => {
+interface ButtonsProps {
+	start: () => void;
+	pause: () => void;
+	resetTimer: () => void;
+}
+
+const Buttons = ({ start, pause, resetTimer }: ButtonsProps) => {
 	const { t } = useTranslation();
-    const {start, pause, resetTimer} = useConfigStopwatch(totalTime); 
 
 	return (
 		<div className="buttons">

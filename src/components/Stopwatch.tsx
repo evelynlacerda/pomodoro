@@ -1,18 +1,25 @@
-import useConfigStopwatch from "@/hooks/useConfigs";
-import { CircularProgressbar } from "react-circular-progressbar";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import 'react-circular-progressbar/dist/styles.css';
 
-const Stopwatch = ({ totalTime }: { totalTime: number }) => {
-    const {timeLeft, formatTime} = useConfigStopwatch(totalTime);
-    const percentage = (timeLeft / totalTime) * 100;
-    // const percentage = 75;
-    
+const BREAK_COLOR = "#ef4444";
+
+interface StopwatchProps {
+    totalTime: number;
+    timeLeft: number;
+    isBreak: boolean;
+    formatTime: (seconds: number) => string;
+}
+
+const Stopwatch = ({ totalTime, timeLeft, isBreak, formatTime }: StopwatchProps) => {
+    const percentage = totalTime > 0 ? (timeLeft / totalTime) * 100 : 0;
+
     return (
 			<div className="stopwatch">
                 <div className="shadow"></div>
 				<CircularProgressbar
 					value={percentage}
 					text={formatTime(timeLeft)}
+					styles={isBreak ? buildStyles({ pathColor: BREAK_COLOR }) : undefined}
 				/>
 			</div>
 		);
